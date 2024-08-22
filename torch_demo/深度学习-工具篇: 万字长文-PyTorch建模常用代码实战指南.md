@@ -14,4 +14,4 @@ jupyter:
 
 ## 理论与实战结合
 
-![torch使用功能点demo](../pics/torch使用功能点demo.png)
+![torch使用功能点demo](https://cdn.jsdelivr.net/gh/w666x/image/04_nlp/pics/torch使用功能点demo.png)
