@@ -2,12 +2,10 @@
 """目标检测-CIFAR10数据集来训练一个卷积神经网络"""
 
 # +
-from imshow
+from matplotlib.pyplot import imshow
 import torch
-import torch.nn as nn
-import torch.nn.functional as F
-import torch.optim as optim
-from torchvision import datasets, transforms
+from torch import nn, optim
+import torchvision
 
 from data_loader import my_data_loader
 from models import Net
@@ -19,11 +17,11 @@ def test_eval(testloader):
     """模型效果测试"""
     dataiter = iter(testloader)
     images, labels = dataiter.next()
-    imshow(torchvision.utils.make_grid(images))
-    print('GroundTruth: ', ' '.join('%5s' % classes[labels[j]] for j in range(4)))
+#     imshow(torchvision.utils.make_grid(images))
+#     print('GroundTruth: ', ' '.join('%5s' % classes[labels[j]] for j in range(4)))
     outputs = net(images)
     _, predicted = torch.max(outputs, 1)
-    print('Predicted: ', ' '.join('%5s' % classes[predicted[j]] for j in range(4)))
+#     print('Predicted: ', ' '.join('%5s' % classes[predicted[j]] for j in range(4)))
     correct = 0
     total = 0
     with torch.no_grad():
